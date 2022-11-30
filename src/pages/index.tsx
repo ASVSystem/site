@@ -6,7 +6,7 @@ import { Box, Typography } from '@mui/material';
 
 
 import { getDatoContent } from '../lib/datocms'
-import { StructuredText, StructuredTextDocument } from 'react-datocms';
+import { StructuredText, StructuredTextPropTypes } from 'react-datocms';
 import { Layout } from '../components/Layout';
 
 
@@ -24,7 +24,7 @@ const HOME_ABOUT_US = `query MyQuery {
 interface HomeAboutUsProps {
   allHomeAbouts: [{
     title: string;
-    content: Document | StructuredText<Record, Record> | StructuredTextDocument | Node | null | undefined;
+    content: any
   }]
 }
 

@@ -20,7 +20,7 @@ const PRIVACY_POLICY_PAGE = `query MyQuery {
 interface AllPolicyPrivacyProps {
   allPolicyPrivacies: [{
     title: string;
-    content: Document | StructuredText<any, any> | StructuredTextDocument | Node | null | undefined;
+    content: any
   }]
 }
 
