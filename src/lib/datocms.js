@@ -7,7 +7,7 @@ export function getDatoContent({ query, preview }) {
     ? `https://graphql.datocms.com/preview`
     : `https://graphql.datocms.com/`
   const headers = {
-    authorization: `Bearer ${process.env.NEXT_DATOCMS_API_TOKEN}`,
+    authorization: 'Bearer 1e79c7a590e61d49b79ef142890766'//`Bearer ${process.env.NEXT_DATOCMS_API_TOKEN}`,
 
   };
 
