@@ -28,8 +28,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
       # env:
-      #  NEXT_DATOCMS_API_TOKEN: ${{secret.NEXT_DATOCMS_API_TOKEN}}
-    - run: export DATOCMS_API_TOKEN=${{secret.NEXT_DATOCMS_API_TOKEN}}
+      #  NEXT_DATOCMS_API_TOKEN: ${{secrets.NEXT_DATOCMS_API_TOKEN}}
+    - run: export DATOCMS_API_TOKEN=${{secrets.NEXT_DATOCMS_API_TOKEN}}
     - run: npm ci
     - run: npm run build
     - run: npm test export
