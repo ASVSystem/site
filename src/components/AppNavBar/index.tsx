@@ -8,14 +8,11 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Divider } from '@mui/material';
-import { useRouter } from 'next/router';
+
 
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
@@ -25,8 +22,7 @@ export function AppNavBar() {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const [anchorProducts, setOpenProducts] = React.useState<null | HTMLElement>(null);
 
-  const { asPath } = useRouter()
-  console.log(asPath)
+
 
   const session = false // implement authentication 
 
@@ -77,14 +73,14 @@ export function AppNavBar() {
 
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             <Typography variant='h5' sx={{ minWidth: 100 }}>
-              <Link href={`${asPath}`} style={{ textDecoration: 'none' }} >About Us</Link>
+              <Link href={`/`} style={{ textDecoration: 'none' }} >About Us</Link>
             </Typography>
             <Typography variant='h5' onClick={handleClickProducts} sx={{ minWidth: 100, }}>
               Products
             </Typography>
             <Typography variant='h5' sx={{ minWidth: 100, }}>Contact</Typography>
             <Typography variant='h5' sx={{ minWidth: 100, }}>
-              <Link href={`${asPath}privacy-policy`} style={{ textDecoration: 'none' }} >Privacy Policy</Link>
+              <Link href='/privacy-policy' style={{ textDecoration: 'none' }} >Privacy Policy</Link>
             </Typography>
           </Box>
 
@@ -126,7 +122,7 @@ export function AppNavBar() {
               ))} */}
               <MenuItem>
                 <Typography variant='h5' sx={{ minWidth: 100 }}>
-                  <Link href={`${asPath}`} style={{ textDecoration: 'none' }} >About Us</Link>
+                  <Link href='/' style={{ textDecoration: 'none' }} >About Us</Link>
                 </Typography>
               </MenuItem>
               <MenuItem>
@@ -139,7 +135,7 @@ export function AppNavBar() {
               </MenuItem>
               <MenuItem>
                 <Typography variant='h5' sx={{ minWidth: 100, }}>
-                  <Link href={`${asPath}privacy-policy`} style={{ textDecoration: 'none' }} >Privacy Policy</Link>
+                  <Link href='/privacy-policy' style={{ textDecoration: 'none' }} >Privacy Policy</Link>
                 </Typography>
               </MenuItem>
             </Menu>
@@ -162,7 +158,7 @@ export function AppNavBar() {
               variant="h6"
               noWrap
               component="a"
-              href={`${asPath}`}
+              href='/'
               sx={{
                 mr: 2,
                 display: { xs: 'flex', md: 'none', alignItems: 'center' },
