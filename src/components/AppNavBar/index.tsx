@@ -11,7 +11,7 @@ import Avatar from '@mui/material/Avatar';
 import MenuItem from '@mui/material/MenuItem';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Divider } from '@mui/material';
+import { Divider, Tooltip } from '@mui/material';
 
 
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
