@@ -32,7 +32,7 @@ jobs:
     #- run: export NEXT_DATOCMS_API_TOKEN=${{secrets.NEXT_DATOCMS_API_TOKEN}}
     - run: npm ci
     - run: npm run build
-    - run: npm test export
+    - run: npm export
     
     - name: Deploy
       uses: Jamesives/github-pages-deploy-action@v4.2.5
