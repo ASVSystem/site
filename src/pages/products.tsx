@@ -6,6 +6,7 @@ import { Layout } from '../components/Layout';
 
 import { getDatoContent } from '../lib/datocms'
 import { StructuredText, StructuredTextDocument } from 'react-datocms';
+import { Box } from '@mui/system';
 
 
 
@@ -69,7 +70,17 @@ export default function Products({ allVancomycinCalculators }: AllVancomycinCalc
               <Typography fontSize={20} fontWeight="bold" color="primary.main" >{content.title}</Typography>
 
               <StructuredText data={content.vancomycinCalculator.value} />
-              <Image src={content.image.url} alt="Image calculadora" width={1024} height={500} />
+              <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+                <Image src={content.image.url} alt="Image calculadora" width={1024} height={500} />
+              </Box>
+              <Box sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex', md: 'none' } }}>
+                <Image src={content.image.url} alt="Image calculadora" width={600} height={300}
+                />
+              </Box>
+              <Box sx={{ flexGrow: 1, display: { xs: 'flex', sm: 'none', md: 'none' } }}>
+                <Image src={content.image.url} alt="Image calculadora" width={350} height={150}
+                />
+              </Box>
               {/* <Typography>{content.image.url}</Typography> */}
 
             </Container>
