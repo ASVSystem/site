@@ -245,8 +245,8 @@ export function AppNavBar() {
             transformOrigin={{ horizontal: 'right', vertical: 'top' }}
             anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
           >
-            <MenuItem component='a' href="/product">
-              Easy CDS
+            <MenuItem component='a' href="/products#infection-prevention-measuers">
+              Infection Prevention Measures
             </MenuItem>
             <MenuItem component='a' href="/products#vancomycin-calculator">
               Vancomycin Calculator

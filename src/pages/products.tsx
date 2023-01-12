@@ -58,11 +58,6 @@ export default function Products({ allVancomycinCalculators }: AllVancomycinCalc
         paddingTop: 2,
         height: '100vh'
       }}>
-        <section style={{ height: '100vh', marginTop: 20 }} id='easy-cds'>
-          <Container maxWidth="xl">
-            <Typography fontSize={20} fontWeight="bold" color="primary.main">Products</Typography>
-          </Container>
-        </section>
         <section style={{ height: '100vh', marginTop: 20 }} id='vancomycin-calculator'>
           {products.map(content =>
             <Container key={content.title} maxWidth="xl">
@@ -85,6 +80,13 @@ export default function Products({ allVancomycinCalculators }: AllVancomycinCalc
 
             </Container>
           )}
+        </section>
+        <section style={{ height: '100vh', marginTop: 20 }} id='infection-prevention-measuers'>
+          <Container maxWidth="xl">
+            <Typography fontSize={20} fontWeight="bold" color="primary.main">Infection Prevention Measures</Typography>
+            <Typography fontSize={16} color="black">Building...</Typography>
+
+          </Container>
         </section>
       </Container>
     </Layout>
